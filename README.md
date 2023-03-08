@@ -35,7 +35,7 @@ Some highlights:
 
 ## eRPC quickstart
  * Build and run the test suite:
-   `cmake . -DPERF=OFF -DTRANSPORT=dpdk; make -j; sudo ctest`.
+   `cmake . -DPERF=ON -DTRANSPORT=infiniband -DROCE=on; make -j; sudo ctest`.
    * `DPERF=OFF` enables debugging, which greatly reduces performance. Set
      `DPERF=ON` for performance measurements.
    * Here, `dpdk` should be replaced with `infiniband` for InfiniBand NICs.

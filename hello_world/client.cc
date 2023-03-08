@@ -8,7 +8,7 @@ void cont_func(void *, void *) { printf("%s\n", resp.buf_); }
 void sm_handler(int, erpc::SmEventType, erpc::SmErrType, void *) {}
 
 int main() {
-  std::string client_uri = kClientHostname + ":" + std::to_string(kUDPPort);
+  std::string client_uri = kClientHostname + ":" + std::to_string(kUDPPort+1);
   erpc::Nexus nexus(client_uri);
 
   rpc = new erpc::Rpc<erpc::CTransport>(&nexus, nullptr, 0, sm_handler);
